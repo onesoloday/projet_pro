@@ -1,37 +1,40 @@
 
-
 const express = require('express');
 const fs = require('fs');
 const bodyParser = require('body-parser');
 const path = require('path');
 const nodemailer = require('nodemailer');
 const app = express();
-const port = 3000;
+const port = 5500;
 
 app.use(express.static(path.join(__dirname, 'cj')));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+app.use('/css', express.static(path.join(__dirname, 'cj/css')));
+app.use('/js', express.static(path.join(__dirname, 'cj/js')));
+app.use('/photo', express.static(path.join(__dirname, 'cj/Photo')));
 
-app.use('css', express.static(path.join(__dirname, 'cj/css')));
-app.use('js', express.static(path.join(__dirname, 'cj/js')));
-app.use('Photo', express.static(path.join(__dirname, 'cj/Photo')));
 // Routes pour servir les fichiers HTML
-// app.get('/', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'index.html'));
-// });
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'cj', 'index.html'));
+});
 
-// app.get('/equipe', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'equipe.html'));
-// });
+app.get('/equipe', (req, res) => {
+    res.sendFile(path.join(__dirname, 'cj', 'equipe.html'));
+});
 
-// app.get('/contact', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'contact.html'));
-// });
+app.get('/contact', (req, res) => {
+    res.sendFile(path.join(__dirname, 'cj', 'contact.html'));
+});
+
+app.get('/offre', (req, res) => {
+    res.sendFile(path.join(__dirname, 'cj', 'offre.html'));
+});
 
 // Route pour récupérer les 10 derniers commentaires
-app.get('/api/comments', (req, res) => {
-    fs.readFile(path.join(__dirname, 'blog/comments.txt'), 'utf8', (err, data) => {
+app.get('/add-comment', (req, res) => {
+    fs.readFile(path.join(__dirname, 'blog', 'comments.txt'), 'utf8', (err, data) => {
         if (err) {
             console.error(err);
             res.status(500).send('Erreur serveur');
@@ -43,13 +46,13 @@ app.get('/api/comments', (req, res) => {
 });
 
 // Route pour ajouter un commentaire
-app.post('/api/comment', (req, res) => {
+app.post('/add-comment', (req, res) => {
     const { comment } = req.body;
     if (!comment || comment.trim() === '') {
         res.status(400).send('Le commentaire ne peut pas être vide.');
         return;
     }
-    fs.appendFile(path.join(__dirname, 'blog/comments.txt'), comment.trim() + '\n', (err) => {
+    fs.appendFile(path.join(__dirname, 'blog', 'comments.txt'), comment.trim() + '\n', (err) => {
         if (err) {
             console.error(err);
             res.status(500).send('Erreur serveur');
@@ -64,16 +67,17 @@ app.post('/api/comment', (req, res) => {
 
 
 
+
+
 // Gestion du formulaire de contact
 app.post('/api/contact', (req, res) => {
     const { name, mail, comment } = req.body;
-    console.log(name, mail, comment);
 
     const transporter = nodemailer.createTransport({
         service: 'gmail', 
         auth: {
             user: 'onesoloday26@gmail.com',
-            pass: 'dyag jdkm ersp evrk' 
+            pass: 'dyag jdkm ersp evrk'
         }
     });
 
@@ -84,7 +88,7 @@ app.post('/api/contact', (req, res) => {
         text: `Nom: ${name}\nEmail: ${mail}\nMessage: ${comment}`
     };
 
-    transporter.sendMail(mailOptions, (error, data) => {
+    transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
             console.error('Erreur lors de l\'envoi de l\'email:', error);
             res.status(500).send('Erreur serveur lors de l\'envoi de l\'email');
@@ -93,9 +97,6 @@ app.post('/api/contact', (req, res) => {
             res.send('Message envoyé avec succès !');
         }
     });
-});
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/cj/index.html');
 });
 
 app.listen(port, () => {

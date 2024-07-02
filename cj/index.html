@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lendor</title>
-    <link rel="stylesheet" href="css/acceuil.css">
+    <link rel="stylesheet" href="/css/acceuil.css">
     <script src="https://kit.fontawesome.com/1079dfd61d.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,10 +19,10 @@
     <div class="for_barrDeTache">
         <span><i class="fa-solid fa-crown" style="color: #FFD43B;"></i>Lendor</span>
         <span>
-            <a href="index.html"><button>Accueil</button></a>
-            <a href="offre.html"><button>Nos Offres</button></a> 
-            <a href="equipe.html"><button>Notre Equipe</button></a>
-            <a href="contact.html"><button>Contact</button></a>
+            <a href="/"><button>Accueil</button></a>
+            <a href="/offre"><button>Nos Offres</button></a> 
+            <a href="/equipe"><button>Notre Equipe</button></a>
+            <a href="/contact"><button>Contact</button></a>
         </span>
     </div>
     
@@ -99,28 +99,21 @@
 
     <div class="for_DenYPt">
         <center>
-            
-        <sol-em>
-            <p>Ecouter ce que nos clients pensent de nous</p>
-
-            <div class="fr_cm">
-               
-                <div id="commentaires">
-                    <!-- Ici seront affichés les commentaires -->
+            <sol-em>
+                <p>Ecouter ce que nos clients pensent de nous</p>
+                <div class="fr_cm">
+                    <div id="commentaires">
+                        <!-- Ici seront affichés les commentaires -->
+                    </div>
                 </div>
- 
-            </div>
-            
-
-            <form id="commentForm" method="POST" action="/add-comment">
-                <input type="text" id="nomInput" name="nom" placeholder="Votre nom"><br>
-                <textarea name="comment" rows="4" id="commentaireInput" cols="50" required placeholder="votre message"></textarea><br>
-                <input type="submit" value="Envoyer le commentaire">
-            </form>
-        </sol-em>
+                <form id="commentForm">
+                    <input type="text" id="nomInput" name="nom" placeholder="Votre nom"><br>
+                    <textarea name="comment" rows="4" id="commentaireInput" cols="50" required placeholder="votre message"></textarea><br>
+                    <input type="submit" value="Envoyer le commentaire">
+                </form>
+            </sol-em>
         </center>
     </div>
-
 
     <div class="for_anba">
         <span>Copyright &copy; 2019 Dyma, Inc.</span>
