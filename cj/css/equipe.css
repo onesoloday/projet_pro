@@ -1,0 +1,137 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: rgb(228, 226, 226);
+}
+
+.for_barrDeTache{
+    width: 100%;
+    height: 50px;
+    background: rgb(85, 84, 84);
+    color: white;
+    display: flex;
+    padding-left: 2%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+.for_barrDeTache span:nth-child(1){
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.for_barrDeTache span i{
+    margin-right: 10px;
+}
+.for_barrDeTache span:nth-child(2){
+    position: absolute;
+    right: 0;
+    width: 100%;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+a{
+    text-decoration: none;
+}
+.for_barrDeTache button{
+    width: 100px;
+    height: 100%;
+    display: flex;
+    align-items: center; 
+    cursor: pointer;
+    justify-content: center;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 14px;
+    color: white;
+}
+.for_barrDeTache button:hover{
+color: white;
+text-decoration: underline;
+}
+
+
+
+/* deuxieme patie*/
+
+
+.for_attention{
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    top: 20%;
+}
+.for_attention  span{
+    width: 70%;
+    display: block;
+    margin: 0 15%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    padding: 2%;   
+}
+.for_attention span p{
+    text-align: center;
+    font-size: 24px;
+    width: 100%;
+    height: 100%;
+}
+
+
+.for_partie2 {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    height: auto;
+    top: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.For_center{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 2% 10%;
+    width: 100%;
+    height: auto;
+}
+.For_center span{
+    margin: 10% 15%;
+    padding: 0 2%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: white;
+}
+
+.For_center span img{
+    width: 60%;
+    height: 50%;
+    margin: 0 18%;
+    border-radius: 50px;
+    background-color: rgb(228, 226, 226);
+}
+.For_center span p{
+    margin: 10px;
+}
+.For_center span a{
+    margin: 15px;
+}
+
+.for_anba {
+    width: 100%;
+    height: 100px;
+    background: rgb(85, 84, 84);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: large;
+    margin-top: 90%;
+}

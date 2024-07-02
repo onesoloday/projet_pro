@@ -1,0 +1,138 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: rgb(228, 226, 226);
+}
+
+.for_barrDeTache{
+    width: 100%;
+    height: 50px;
+    background: rgb(85, 84, 84);
+    color: white;
+    display: flex;
+    padding-left: 2%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+.for_barrDeTache span:nth-child(1){
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.for_barrDeTache span i{
+    margin-right: 10px;
+}
+.for_barrDeTache span:nth-child(2){
+/*    width: 100%;*/
+    position: absolute;
+    right: 0;
+    width: 100%;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+a{
+    text-decoration: none;
+}
+.for_barrDeTache button{
+    width: 100px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    color: white;
+}
+.for_barrDeTache button:hover{
+/*    background: white;*/
+color: white;
+text-decoration: underline;
+}
+
+
+
+/* partie 2*/
+.for_partie2{
+    height: 500px;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    margin-top: 5%;
+}
+
+.for_partie2 span{
+    display: flex;
+    margin: 0 15%;
+    background-color: rgb(228, 226, 226);
+    background-image: url('../Photo/local1.png');
+    width: 70%;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 1.5px 1.5px 10px 0.5px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+.for_partie2 span p{
+    text-align: center;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20%;
+    color: white;
+    margin-top: -40%;
+}
+.for_partie2 span:hover{
+    filter: grayscale(100%);
+}
+
+
+
+.for_partTexte{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 115%;
+}
+.Text_center{
+    height: auto;
+    margin: 0px 10%;
+    text-align: center;
+    padding: 4% 8%;
+    font-size: 20px;
+    border-radius: 10px;
+    box-shadow: 1.5px 1.5px 10px 0.5px rgba(0, 0, 0, 0.3);
+}
+.Text_center span{
+    color: black;
+}
+.Text_center h1{
+    text-align: center;
+    margin-bottom: 2%;
+}
+.Text_center p{
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 10%;
+}
+
+
+
+
+.for_anba {
+    width: 100%;
+    height: 100px;
+    background: rgb(85, 84, 84);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: large;
+    margin-top: 100%;
+}

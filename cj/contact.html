@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Contact</title>
+	<link rel="stylesheet" type="text/css" href="css/contact.css">
+	<script src="https://kit.fontawesome.com/1079dfd61d.js" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/1079dfd61d.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+</head>
+<body>
+
+	<div class="for_barrDeTache">
+        <span><i class="fa-solid fa-crown" style="color: #FFD43B;"></i>Ledor</span>
+        <span>
+            <a href="index.html"><button>Accueil</button></a>
+            <a href="offres.html"><button>Nos Offres</button></a> 
+            <a href="equipe.html"><button>Notre Equipe</button></a>
+            <a href="#"><button>Contact</button></a>
+        </span>
+    </div>
+
+    <div>
+    </div>
+
+
+	<div class="for_partie3">
+		<div class="for_cv">
+			<h1> <span id="dynamicWord" class="dynamic-word">Nous contacter</span> </h1>
+			<span>
+				<p>
+					D&eacute;couvrez l'excellence en explorant notre
+					 entreprise,
+                    o&ugrave; l'innovation et la passion se rencontre se rencontre pour 
+                    cr&eacute;er des experiences inoubliables.				
+				</p>
+			</span>
+		</div>
+		<div class="for_center">
+
+			<div class="for_us">
+				<div class="for_local">
+					<span>
+						<span>
+							<a href=""><i class="fa-solid fa-location-dot"></i>Londres</a>
+							<p>#34,town,north, london</p>
+						</span>
+					</span>
+					<span>
+						<span>
+							<a href=""><i class="fa-brands fa-whatsapp"></i>Whatsapp</a>
+							<p>Liassez nous un message <br> et suivez notre chaine</p>
+						</span>
+					</span>
+					<span>
+						<span>
+							<a href="onesoloday26@gmial.com"><i class="fa-regular fa-envelope"></i>Email</a>
+							<p>Notre courriel &eacute;lectronique</p>
+						</span>
+					</span>
+					<span>
+						<span>
+							<a href=""><i class="fa-brands fa-facebook"></i>Facebook</a>
+							<p>Suivez nous sur Facebook</p>
+						</span>
+					</span>
+				</div>
+			</div>
+		
+			<div class="for_text">
+				<form id="contactForm" method="POST" action="/api/contact">
+					<div>
+						<label>Nom :</label>
+						<input type="text" id="name" name="name" required>
+					</div>
+					<div>
+						<label>Prénom :</label>
+						<input type="text" id="lastname" name="lastname" required>
+					</div>
+					<div>
+						<label>Email :</label>
+						<input type="email" id="mail" name="mail" required>
+					</div>
+					<div>
+						<label>Téléphone :</label>
+						<input type="tel" id="phone" name="phone" required>
+					</div>
+					<div>
+						<textarea id="comment" name="comment" placeholder="Écrivez votre message" required></textarea>
+					</div>
+					<div>
+						<button type="submit" class="btn btn-primary">Envoyer</button>
+					</div>
+				</form>
+			</div>
+			
+		</div>
+	</div>
+
+	<div class="for_anba">
+        <span>Copyright &copy; 2019 Dymm inc</span>
+    </div>
+	<script src="js/contact.js"></script>
+
+</body>
+</html>
