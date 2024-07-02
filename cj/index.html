@@ -101,12 +101,15 @@
         <center>
             <sol-em>
                 <p>Ecouter ce que nos clients pensent de nous</p>
+
                 <div class="fr_cm">
+
                     <div id="commentaires">
                         <!-- Ici seront affichés les commentaires -->
                     </div>
+                    
                 </div>
-                <form id="commentForm">
+                <form id="commentForm" method="POST" action="/add-comment">
                     <input type="text" id="nomInput" name="nom" placeholder="Votre nom"><br>
                     <textarea name="comment" rows="4" id="commentaireInput" cols="50" required placeholder="votre message"></textarea><br>
                     <input type="submit" value="Envoyer le commentaire">
@@ -114,6 +117,7 @@
             </sol-em>
         </center>
     </div>
+
 
     <div class="for_anba">
         <span>Copyright &copy; 2019 Dyma, Inc.</span>
